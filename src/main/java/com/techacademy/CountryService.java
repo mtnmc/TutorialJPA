@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional; // 追加
 public class CountryService {
     private final CountryRepository repository;
 
-
     public CountryService(CountryRepository repository) {
         this.repository = repository;
     }
@@ -31,7 +30,7 @@ public class CountryService {
         return country;
     }
 
- // 更新（追加）を行なう
+    // 更新（追加）を行なう
     @Transactional
     public void updateCountry(String code, String name, int population) {
         Country country = new Country(code, name, population);
